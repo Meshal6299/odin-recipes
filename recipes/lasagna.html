@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lasagna Recipe</title>
+    <style>
+        body {
+            font-family: monospace;
+            margin: 10;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 50px;
+        }
+        .container {
+            width: 95vw;
+            background-color: #333;
+            color: #f0f0f0;
+            padding: 20px;
+            border-radius: 20px;
+            float: left;
+            display: flex;
+            height: min-content;
+        }
+        .recipe {
+            width: 460%;
+        }
+        .ingredients .steps {
+            position: absolute;
+        }
+        img {
+            width: 800px;
+            float: right;
+            position: relative;
+            top: 0;
+            border: 1px solid #f0f0f0;
+            border-radius: 20px;
+        }
+        h3{
+            font-size: 22px;
+        }
+        h3:hover{
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        li{
+            font-size: 15px;
+            color: #f0f0f0;
+        }
+        ul{
+            display: none;
+        }
+        ol{
+            display: none;
+        }
+        a{
+            text-align: center;
+            margin-top: 20px;
+            color: #333;
+            font-size: 20px;
+            text-decoration: none;
+            background: #c9c9c9;
+            width: 70px;
+            border: 2px solid rgba(0, 0, 0, 0.208);
+            border-radius: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Lasagna</h1>
+    <div class="container">
+    <div class="recipe">
+        <h3 id="ingredients">Ingredients</h3>
+        <ul >
+            <li>1 pound sweet Italian sausage</li>
+            <li>3/4 pound lean ground beef</li>
+            <li>1/2 cup minced onion</li>
+            <li>2 cloves garlic, crushed</li>
+            <li>1 (28 ounce) can crushed tomatoes</li>
+            <li>2 (6 ounce) cans tomato paste</li>
+            <li>2 (6.5 ounce) cans canned tomato sauce</li>
+            <li>1/2 cup water</li>
+            <li>2 tablespoons white sugar</li>
+            <li>1 1/2 teaspoons dried basil leaves</li>
+            <li>1/2 teaspoon fennel seeds</li>
+            <li>1 teaspoon Italian seasoning</li>
+            <li>1 tablespoon salt</li>
+            <li>1/4 teaspoon ground black pepper</li>
+            <li>4 tablespoons chopped fresh parsley</li>
+            <li>12 lasagna noodles</li>
+            <li>16 ounces ricotta cheese</li>
+            <li>1 egg</li>
+            <li>3/4 teaspoon salt</li>
+            <li>3/4 pound mozzarella cheese, sliced</li>
+            <li>3/4 cup grated Parmesan cheese</li>
+        </ul>
+        <h3 id="steps">Steps</h3>
+        <ol>
+            <li>In a Dutch oven, cook sausage, ground beef, onion, and garlic over medium heat until well browned.</li>
+            <li>Stir in crushed tomatoes, tomato paste, tomato sauce, and water.</li>
+            <li>Season with sugar, basil, fennel seeds, Italian seasoning, 1 tablespoon salt, pepper, and 2 tablespoons parsley.</li>
+            <li>Simmer, covered, for about 1 1/2 hours, stirring occasionally.</li>
+            <li>Bring a large pot of lightly salted water to a boil.</li>
+            <li>Cook lasagna noodles in boiling water for 8 to 10 minutes.</li>
+            <li>Drain noodles, and rinse with cold water.</li>
+            <li>In a mixing bowl, combine ricotta cheese with egg, remaining parsley, and 1/2 teaspoon salt.</li>
+            <li>Preheat oven to 375 degrees F (190 degrees C).</li>
+            <li>To assemble, spread 1 1/2 cups of meat sauce in the bottom of a 9x13-inch baking dish.</li>
+            <li>Arrange 6 noodles lengthwise over meat sauce.</li>
+            <li>Spread with one half of the ricotta cheese mixture.</li>
+            <li>Top with a third of mozzarella cheese slices.</li>
+            <li>Spoon 1 1/2 cups</li>
+            <li>meat sauce over mozzarella, and sprinkle with 1/4 cup Parmesan cheese.</li>
+            <li>Repeat layers, and top with remaining mozzarella and Parmesan cheese.</li>
+            <li>Cover with foil: to prevent sticking, either spray foil with cooking spray, or make sure the foil does not touch the cheese.</li>
+            <li>Bake in preheated oven for 25 minutes.</li>
+            <li>Remove foil, and bake an additional 25 minutes.</li>
+            <li>Cool for 15 minutes before serving.</li>
+        </ol>
+    </div>
+    <div class="img">
+        <img src="../img/lasagna.jpg" alt="">
+    </div>
+    </div>
+    <a href="../index.html">Home</a>
+    <script>
+        document.querySelector('.recipe #ingredients').addEventListener('click', function(){
+            document.querySelector('.recipe ul').style.display = 'block';
+            document.querySelector('.recipe ol').style.display = 'none';
+        });
+
+        document.querySelector('.recipe #steps').addEventListener('click', function(){
+            document.querySelector('.recipe ol').style.display = 'block';
+            document.querySelector('.recipe ul').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
